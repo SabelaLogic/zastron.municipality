@@ -95,6 +95,7 @@ function Home() {
       <section className="mx-auto grid max-w-6xl items-center gap-6 px-4 py-10 md:grid-cols-5">
         <img
           src="/people/mkhwane.webp"
+          loading="lazy" decoding="async"
           alt="Mr L. Mkhwane, municipal manager"
           className="aspect-[3/4] w-full border border-line object-cover object-top md:col-span-2"
         />

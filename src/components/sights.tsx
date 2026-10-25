@@ -124,6 +124,7 @@ export function SightStage({
         if (sight.video) {
           return (
             <video
+              preload="none"
               key={sight.id}
               ref={videoRef}
               className={cls}
@@ -198,7 +199,7 @@ export function SightStrip({
                 "block w-full text-left " + (i === index ? "ring-2 ring-navy ring-offset-2 ring-offset-paper" : "")
               }
             >
-              <img src={sight.image} alt="" className="aspect-video w-full object-cover" />
+              <img loading="lazy" decoding="async" src={sight.image} alt="" className="aspect-video w-full object-cover" />
               <span className="mt-2 block text-sm font-bold text-ink">{sight.title[lang]}</span>
               <span className="block text-sm text-muted">{sight.place[lang]}</span>
             </button>
